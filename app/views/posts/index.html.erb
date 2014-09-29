@@ -1,0 +1,36 @@
+
+<section class="postform">
+<%= simple_form_for @post do |form| %>
+
+	<%= form.input :post, label: false, placeholder: "What is blinq?" %>
+
+	
+
+<% end %>
+<p>Hit Enter to post</p>
+</section>
+
+<section class="posts">
+
+<h1>blinqs</h1>
+
+<% @posts.each do |post| %>
+
+		<div class="blinq">
+			<h3>"<%= post.post %>"</h3>
+			</br>
+			<ul>
+				<li>by username</li>
+				<li>in Location! <%= @post.latitude %>, <%= @post.longitude %></li>
+				<li><%= time_ago_in_words post.created_at %> ago</li>
+				<li>q it (upvote)<%= link_to "Upvote", 
+						post_votes_path(post, back_to: "home"),
+						method: :post
+						 %></li>
+				<li><%= pluralize post.votes.count, "vote" %></li>
+			</ul>
+		</div>
+
+	<% end %>
+
+</section>

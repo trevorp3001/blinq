@@ -1,0 +1,114 @@
+@import url(http://fonts.googleapis.com/css?family=Lora:400italic,700italic);
+
+$bg: #fff;
+$textColour: #000;
+$primaryColour: #000019;
+$secondaryColour: #e5e5e5;
+$linkColour: #0091FF;
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background: $bg;
+  color: $textColour;  
+  
+  font-family: 'Open Sans Condensed', arial;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.01em;
+
+  width:100%;
+  
+}
+
+header {
+  font-size: 16px;
+  font-weight: 700;
+
+  background: #d3d3d3;
+  
+  height: 50px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+  
+  h1 {
+    margin: 0px 0 0px;
+    height: 0px;
+  }
+
+  h1 a {
+    height: 15px;
+    line-height: 0;
+    font-size: 0.1px;
+  }
+
+  img {
+    width: 56px;
+    vertical-align: bottom;
+  }
+}
+
+.content{
+  height: auto;
+  width: 600px;
+  margin: 20px auto 8px auto;
+  
+}
+
+.postform{
+  background: #b2b2ff;
+  height: 50px;
+  width: 600px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+
+  p {
+    margin: 0 0 0 10px;
+  }
+
+}
+
+.blinq {
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid $primaryColour;
+  background: #e5e5ff;
+
+  p {
+    margin: 10px 0;
+  }
+
+  li {
+    display: inline;
+    margin-right: 10px;
+  }
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+input[type="text"],
+textarea {
+
+  margin: 5px;
+  width: 590px;
+} 
+
+input[type="submit"], a.button {
+  float: right;
+  width: auto;
+  font-size: 16px;
+  font-weight: 600;
+
+  color: $textColour;
+  transition: color 0.5s;
+
+  &:hover {
+    
+  }
+}
+
